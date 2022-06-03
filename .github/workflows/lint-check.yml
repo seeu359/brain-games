@@ -4,12 +4,6 @@ on:
   - push
   - pull-request
 
-jobs:name: Lint code
-
-on:
-  - push
-  - pull-request
-
 jobs:
   build:
     runs-on: ubuntu-latest
