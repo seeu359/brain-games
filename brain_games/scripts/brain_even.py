@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-from brain_games.cli import *
 from random import randint
 import prompt
 
 def main():
-    welcome_user()
+    print("Welcome to the Brain Games!")
+    name = prompt.string("May I have your name? ")
+    print(f'Hello, {name}!')
     correct = 'yes'
     incorrect = 'no'
     counter_correct = 0
@@ -19,20 +20,29 @@ def main():
         elif random_number % 2 > 0 and answer == incorrect:
                 counter_correct += 1
                 print('Correct')
-        else:
-            if answer != (correct or incorrect) and random_number % 2 == 0:
+
+        elif answer != (correct or incorrect) and random_number % 2 == 0:
                     counter_correct = 0
-                    print(f'{answer} is wrong answer ;(. Correct answer was {correct}.')
-            elif answer != (correct or incorrect) and random_number % 2 > 0:
+                    print(f'{answer} is wrong answer ;(. Correct answer was {correct}.'
+                    f'\nLet\'s try again, {name}!')
+                    break
+        elif answer != (correct or incorrect) and random_number % 2 > 0:
                     counter_correct = 0
-                    print(f'{answer} is wrong answer ;(. Correct answer was {incorrect}.')
-            if answer == correct:
+                    print(f'{answer} is wrong answer ;(. Correct answer was {incorrect}.'
+                            f'\nLet\'s try again, {name}!')
+                    break
+        elif answer == correct:
                     counter_correct = 0
-                    print(f'{answer} is wrong answer ;(. Correct answer was {incorrect}.')
-            if answer == incorrect and random_number % 2 > 0:
+                    print(f'{answer} is wrong answer ;(. Correct answer was {incorrect}.'
+                          f'\nLet\'s try again, {name}!')
+                    break
+        elif answer == incorrect and random_number % 2 > 0:
                     counter_correct = 0
-                    print(f'{answer} is wrong answer ;(. Correct answer was {correct}')
-    print(f'Congratulations, {name}!')
+                    print(f'{answer} is wrong answer ;(. Correct answer was {correct}.'
+                          f'\nLet\'s try again, {name}!')
+                    break
+    if counter_correct == 3:
+        print(f'Congratulations, {name}!')
 
 
 if __name__ == '__main__':
