@@ -1,8 +1,10 @@
 install:
 	poetry install
-	poetry publish --dry-run
 	poetry build
 	python3 -m pip install --user --force-reinstall dist/*.whl
+
+publish:
+	poetry publish --dry-run
 
 brain-games:
 	poetry run brain-games
