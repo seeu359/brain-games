@@ -5,7 +5,8 @@ from brain_games.game_logic import *
 
 
 def brain_event():
-    a = ""
+    correct_answer = 'yes'
+    incorrect_answer = 'no'
     name_user = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     counter_correct = 0
@@ -39,6 +40,7 @@ def brain_event():
                 break
     if counter_correct == 3:
         return congrats_win(name_user)
+
 
 
 

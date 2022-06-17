@@ -5,9 +5,6 @@ from random import randint
 max_rounds = 3
 min_num = 1
 max_num = 20
-correct_answer = 'yes'
-incorrect_answer = 'no'
-name = ""
 
 def welcome_user():
     name = prompt.string('May I have your name? ')
