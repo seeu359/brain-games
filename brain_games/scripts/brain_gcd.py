@@ -1,11 +1,10 @@
-#!/usr/bin/env python
 from brain_games.game_logic import *
-from brain_games.games import brain_calc
+from brain_games.games import brain_gcd
 
 
 def main():
     welcome()
-    brain_calc.brain_calc()
+    brain_gcd.brain_gcd()
 
 
 if __name__ == "__main__":
