@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from random import choice
 from brain_games.game_logic import *
 

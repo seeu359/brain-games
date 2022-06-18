@@ -1,5 +1,4 @@
 from brain_games.game_logic import *
-import prompt
 
 
 def brain_gcd():

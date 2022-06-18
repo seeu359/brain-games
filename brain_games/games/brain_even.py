@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from brain_games.game_logic import *
 
 
