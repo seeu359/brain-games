@@ -7,17 +7,22 @@ src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability"
 
 Brain-Game:
 
-1)Brain-even
+1. Brain-even
 
 <a href="https://asciinema.org/a/501663" target="_blank"><img src="https://asciinema.org/a/501663.svg" /></a>
 
-2)Brain-calc: 
+2. Brain-calc: 
 
 <a href="https://asciinema.org/a/502438" target="_blank"><img src="https://asciinema.org/a/502438.svg" /></a>
 
-3) Brain-gcd:
+3. Brain-gcd:
 
 <a href="https://asciinema.org/a/502440" target="_blank"><img src="https://asciinema.org/a/502440.svg" /></a>
 
+4. Brain-progression:
 
+<a href="https://asciinema.org/a/502593" target="_blank"><img src="https://asciinema.org/a/502593.svg" /></a>
 
+5. Brain-prime: 
+
+<a href="https://asciinema.org/a/502595" target="_blank"><img src="https://asciinema.org/a/502595.svg" /></a>
