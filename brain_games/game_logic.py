@@ -1,6 +1,6 @@
 import prompt
 from collections import Counter
-from random import randint
+
 
 max_rounds = 3
 min_num = 5

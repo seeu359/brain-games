@@ -1,4 +1,5 @@
 from brain_games.game_logic import *
+from random import randint
 
 
 def brain_event():
@@ -18,22 +19,16 @@ def brain_event():
         elif random_number % 2 > 0 and answer == incorrect_answer:
             counter_correct += 1
             print('Correct')
+        elif random_number % 2 == 0 and answer == incorrect_answer:
+            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
+                  f'\nLet\'s try again, {name_user}!')
+            break
+        else:
+            print(f'{answer} is wrong answer ;(. Correct answer was {incorrect_answer}.'
+                  f'\nLet\'s try again, {name_user}!')
+            break
 
-        elif answer != (correct_answer or incorrect_answer) and random_number % 2 == 0:
-            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-        elif answer != (incorrect_answer or incorrect_answer) and random_number % 2 > 0:
-            print(f'{answer} is wrong answer ;(. Correct answer was {incorrect_answer}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-        elif answer == correct_answer:
-            print(f'{answer} is wrong answer ;(. Correct answer was {incorrect_answer}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-        elif answer == incorrect_answer and random_number % 2 > 0:
-            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
     if counter_correct == 3:
         return congrats_win(name_user)
+
+print(brain_event())
