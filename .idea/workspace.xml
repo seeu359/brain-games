@@ -42,8 +42,8 @@
       <recent name="$PROJECT_DIR$/brain_games/games" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.brain_prime (1)">
-    <configuration name="brain_gcd (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.BRAIN_GAMES">
+    <configuration name="BRAIN_GAMES" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python-project-lvl1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,11 +51,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/brain_games/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/brain_games/games" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/brain_games/scripts/brain_gcd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/brain_games/games/BRAIN_GAMES.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.BRAIN_GAMES" />
         <item itemvalue="Python.brain_prime (1)" />
         <item itemvalue="Python.brain_prime" />
         <item itemvalue="Python.brain_progression (1)" />
         <item itemvalue="Python.brain_progression" />
-        <item itemvalue="Python.brain_gcd (1)" />
       </list>
     </recent_temporary>
   </component>
