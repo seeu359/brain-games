@@ -11,37 +11,22 @@ def brain_calc():
     while counter_correct < max_rounds:
         num_1 = randint(min_num, max_num)
         num_2 = randint(min_num, max_num)
-        my_module_list = ["+", "-", '*']
-        rand_module = choice(my_module_list)
-        print(f'Question: {num_1} {rand_module} {num_2}')
+        my_module_dict = {
+            num_1 - num_2: f'{num_1} - {num_2}',
+            num_1 + num_2: f'{num_1} + {num_2}',
+            num_1 * num_2: f'{num_1} * {num_2}'
+        }
+        random_example = choice(list(my_module_dict.items()))
+        print(f'Question: {random_example[1]}')
         answer = int(input("Your answer: "))
-
-        if (rand_module == "+") and (num_1 + num_2) == answer:
-            counter_correct += 1
+        if answer == random_example[0]:
             print("Correct")
-        elif (rand_module == "+") and (num_1 + num_2) != answer:
-            print(f'{answer} is wrong answer ;(.'
-                  f' Correct answer was {num_1 + num_2}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-
-        elif (rand_module == "*") and (num_1 * num_2) == answer:
             counter_correct += 1
-            print("Correct")
-        elif (rand_module == "*") and (num_1 * num_2) != answer:
+        else:
             print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {num_1 * num_2}.'
+                  f'Correct answer was {random_example[0]}.'
                   f'\nLet\'s try again, {name_user}!')
             break
 
-        elif (rand_module == "-") and (num_1 - num_2) == answer:
-            counter_correct += 1
-            print("Correct")
-        elif (rand_module == "-") and (num_1 - num_2) != answer:
-            print(f'{answer} is wrong answer ;(.'
-                  f' Correct answer was {num_1 - num_2}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-
-    if counter_correct == 3:
-        return congrats_win(name_user)
+    if counter_correct == max_rounds:
+        congrats_win(name_user)
