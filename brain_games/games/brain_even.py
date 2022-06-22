@@ -30,5 +30,3 @@ def brain_event():
 
     if counter_correct == 3:
         return congrats_win(name_user)
-
-print(brain_event())
