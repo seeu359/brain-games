@@ -1,4 +1,5 @@
-from brain_games.game_logic import welcome_user, max_rounds, min_num, max_num, prompt, dividers, congrats_win
+from brain_games.game_logic import welcome_user, max_rounds, min_num
+from brain_games.game_logic import max_num, prompt, dividers, congrats_win
 from random import randint
 
 
