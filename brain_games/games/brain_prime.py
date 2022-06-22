@@ -1,4 +1,4 @@
-from brain_games.game_logic import *
+from brain_games.game_logic import welcome_user, max_rounds, min_num, max_num, prompt, congrats_win
 from random import randint
 
 
@@ -8,7 +8,7 @@ def brain_prime():
     correct_answer = 'yes'
     incorrect_answer = 'no'
     counter_correct = 0
-    while counter_correct < 3:
+    while counter_correct < max_rounds:
         list_for_number = []
         random_number = randint(min_num, max_num)
         print(f'Question: {random_number}')
