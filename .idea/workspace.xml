@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51495f01-5216-46f7-9de8-c3fc26ac87cd" name="Changes" comment="fix lint errors">
-      <change beforePath="$PROJECT_DIR$/brain_games/games/BRAIN_GAMES.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/BRAIN_GAMES.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/games/brain_calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_calc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/games/brain_even.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_even.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/games/brain_gcd.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_gcd.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/games/brain_prime.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_prime.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/games/brain_progression.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_progression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/scripts/brain_calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/scripts/brain_calc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/scripts/brain_gcd.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/scripts/brain_gcd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/scripts/brain_prime.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/scripts/brain_prime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/scripts/brain_progression.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/scripts/brain_progression.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655926129025</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix lint errors">
+      <created>1655926552224</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655926552224</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

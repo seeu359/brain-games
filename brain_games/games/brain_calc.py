@@ -20,7 +20,8 @@ def brain_calc():
             counter_correct += 1
             print("Correct")
         elif (rand_module == "+") and (num_1 + num_2) != answer:
-            print(f'{answer} is wrong answer ;(. Correct answer was {num_1 + num_2}.'
+            print(f'{answer} is wrong answer ;(.'
+                  f' Correct answer was {num_1 + num_2}.'
                   f'\nLet\'s try again, {name_user}!')
             break
 
@@ -28,7 +29,8 @@ def brain_calc():
             counter_correct += 1
             print("Correct")
         elif (rand_module == "*") and (num_1 * num_2) != answer:
-            print(f'{answer} is wrong answer ;(. Correct answer was {num_1 * num_2}.'
+            print(f'{answer} is wrong answer ;(. '
+                  f'Correct answer was {num_1 * num_2}.'
                   f'\nLet\'s try again, {name_user}!')
             break
 
@@ -36,7 +38,8 @@ def brain_calc():
             counter_correct += 1
             print("Correct")
         elif (rand_module == "-") and (num_1 - num_2) != answer:
-            print(f'{answer} is wrong answer ;(. Correct answer was {num_1 - num_2}.'
+            print(f'{answer} is wrong answer ;(.'
+                  f' Correct answer was {num_1 - num_2}.'
                   f'\nLet\'s try again, {name_user}!')
             break
 

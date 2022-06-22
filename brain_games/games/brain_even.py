@@ -21,11 +21,13 @@ def brain_event():
             counter_correct += 1
             print('Correct')
         elif random_number % 2 == 0 and answer == incorrect_answer:
-            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
+            print(f'{answer} is wrong answer ;(. '
+                  f'Correct answer was {correct_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
         else:
-            print(f'{answer} is wrong answer ;(. Correct answer was {incorrect_answer}.'
+            print(f'{answer} is wrong answer ;(.'
+                  f' Correct answer was {incorrect_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
 

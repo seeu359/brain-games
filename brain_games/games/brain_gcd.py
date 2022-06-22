@@ -17,7 +17,8 @@ def brain_gcd():
             counter_correct += 1
             print('Correct')
         elif answer != dividers(first_number, second_number):
-            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
+            print(f'{answer} is wrong answer ;(. '
+                  f'Correct answer was {correct_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
     if counter_correct == 3:

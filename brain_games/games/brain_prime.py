@@ -24,11 +24,13 @@ def brain_prime():
             print('Correct')
             counter_correct += 1
         elif len(list_for_number) == 2 and (answer == incorrect_answer):
-            print(f'{answer} is wrong answer ;(. Correct answer was {correct_answer}.'
+            print(f'{answer} is wrong answer ;(. '
+                  f'Correct answer was {correct_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
         elif len(list_for_number) > 2 and (answer == correct_answer):
-            print(f'{answer} is wrong answer ;(. Correct answer was {incorrect_answer}.'
+            print(f'{answer} is wrong answer ;(.'
+                  f' Correct answer was {incorrect_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
     if counter_correct == 3:

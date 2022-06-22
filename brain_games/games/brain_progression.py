@@ -15,7 +15,7 @@ def brain_progression():
         for my_iter in progression:
             progression_list.append(my_iter)
         difference_set = set(progression_list)
-        progression_list[randint(0, len(progression_list)-1)] = '..'
+        progression_list[randint(0, len(progression_list) - 1)] = '..'
         difference_set = list(difference_set - set(progression_list))
         final_difference = difference_set[0]
         progression_list = ' '.join([str(_) for _ in progression_list])
@@ -25,7 +25,8 @@ def brain_progression():
             print('Correct')
             counter_correct += 1
         elif answer != final_difference:
-            print(f'{answer} is wrong answer ;(. Correct answer was {final_difference}.'
+            print(f'{answer} is wrong answer ;(. '
+                  f'Correct answer was {final_difference}.'
                   f'\nLet\'s try again, {name_user}!')
             break
     if counter_correct == 3:
