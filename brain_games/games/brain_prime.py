@@ -12,10 +12,10 @@ def brain_prime():
     while counter_correct < max_rounds:
         list_for_number = []
         random_number = randint(min_num, max_num)
-        print(f'Question: {random_number}')
         for i in range(1, random_number + 1):
             if random_number % i == 0:
                 list_for_number.append(i)
+        print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
         if len(list_for_number) == 2 and (answer == correct_answer):
             print('Correct')
@@ -28,10 +28,11 @@ def brain_prime():
                   f'Correct answer was {correct_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
-        elif len(list_for_number) > 2 and (answer == correct_answer):
+        else:
             print(f'{answer} is wrong answer ;(.'
                   f' Correct answer was {incorrect_answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
-    if counter_correct == 3:
+    if counter_correct == max_rounds:
         congrats_win(name_user)
+print(brain_prime())

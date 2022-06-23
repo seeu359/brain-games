@@ -31,5 +31,5 @@ def brain_event():
                   f'\nLet\'s try again, {name_user}!')
             break
 
-    if counter_correct == 3:
+    if counter_correct == max_rounds:
         return congrats_win(name_user)

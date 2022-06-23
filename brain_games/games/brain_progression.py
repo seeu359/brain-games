@@ -29,5 +29,5 @@ def brain_progression():
                   f'Correct answer was {final_difference}.'
                   f'\nLet\'s try again, {name_user}!')
             break
-    if counter_correct == 3:
+    if counter_correct == max_rounds:
         congrats_win(name_user)
