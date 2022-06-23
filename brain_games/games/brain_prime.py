@@ -35,4 +35,3 @@ def brain_prime():
             break
     if counter_correct == max_rounds:
         congrats_win(name_user)
-print(brain_prime())
