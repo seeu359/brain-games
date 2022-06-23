@@ -39,3 +39,11 @@ def dividers(number_1, number_2):
         if count_value > 1:
             final_list[count_key] = count_value
     return max(list(final_list.keys()))
+
+
+def for_brain_prime(number):
+    counter = 0
+    for i in range(2, number // 2 + 1):
+        if number % i == 0:
+            counter += 1
+    return counter
