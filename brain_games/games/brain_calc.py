@@ -1,6 +1,6 @@
 from random import choice
-from brain_games.game_logic import welcome_user, max_num
-from brain_games.game_logic import min_num, max_rounds, congrats_win
+from brain_games.game_logic import welcome_user, MAX_NUM
+from brain_games.game_logic import MIN_NUM, MAX_ROUNDS, congrats_win
 from random import randint
 
 
@@ -8,9 +8,9 @@ def brain_calc():
     name_user = welcome_user()
     counter_correct = 0
     print('What is the result of the expression?')
-    while counter_correct < max_rounds:
-        num_1 = randint(min_num, max_num)
-        num_2 = randint(min_num, max_num)
+    while counter_correct < MAX_ROUNDS:
+        num_1 = randint(MIN_NUM, MAX_NUM)
+        num_2 = randint(MIN_NUM, MAX_NUM)
         my_module_dict = {
             num_1 - num_2: f'{num_1} - {num_2}',
             num_1 + num_2: f'{num_1} + {num_2}',
@@ -28,5 +28,5 @@ def brain_calc():
                   f'\nLet\'s try again, {name_user}!')
             break
 
-    if counter_correct == max_rounds:
+    if counter_correct == MAX_ROUNDS:
         congrats_win(name_user)

@@ -1,5 +1,6 @@
-from brain_games.game_logic import welcome_user, max_rounds, min_num
-from brain_games.game_logic import max_num, prompt, congrats_win, for_brain_prime
+from brain_games.game_logic import welcome_user, MAX_ROUNDS, MIN_NUM
+from brain_games.game_logic import MAX_NUM, prompt
+from brain_games.game_logic import congrats_win, for_brain_prime
 from random import randint
 
 
@@ -7,8 +8,8 @@ def brain_prime():
     name_user = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     counter_correct = 0
-    while counter_correct < max_rounds:
-        random_number = randint(min_num, max_num)
+    while counter_correct < MAX_ROUNDS:
+        random_number = randint(MIN_NUM, MAX_NUM)
         checking_number_prime = for_brain_prime(random_number)
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
@@ -32,5 +33,5 @@ def brain_prime():
                       f' Correct answer was yes.'
                       f'\nLet\'s try again, {name_user}!')
                 break
-    if counter_correct == 3:
+    if counter_correct == MAX_ROUNDS:
         congrats_win(name_user)

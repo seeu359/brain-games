@@ -1,5 +1,5 @@
-from brain_games.game_logic import welcome_user, max_rounds
-from brain_games.game_logic import min_num, max_num, prompt, congrats_win
+from brain_games.game_logic import welcome_user, MAX_ROUNDS
+from brain_games.game_logic import MIN_NUM, MAX_NUM, prompt, congrats_win
 from random import randint
 
 
@@ -9,9 +9,9 @@ def brain_event():
     name_user = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     counter_correct = 0
-    while counter_correct < max_rounds:
+    while counter_correct < MAX_ROUNDS:
 
-        random_number = randint(min_num, max_num)
+        random_number = randint(MIN_NUM, MAX_NUM)
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
         if random_number % 2 == 0 and answer == correct_answer:
@@ -31,5 +31,5 @@ def brain_event():
                   f'\nLet\'s try again, {name_user}!')
             break
 
-    if counter_correct == max_rounds:
+    if counter_correct == MAX_ROUNDS:
         return congrats_win(name_user)

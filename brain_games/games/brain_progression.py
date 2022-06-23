@@ -1,5 +1,5 @@
-from brain_games.game_logic import welcome_user, max_rounds
-from brain_games.game_logic import max_num, prompt, congrats_win
+from brain_games.game_logic import welcome_user, MAX_ROUNDS
+from brain_games.game_logic import MAX_NUM, prompt, congrats_win
 from random import randint
 
 
@@ -7,10 +7,10 @@ def brain_progression():
     name_user = welcome_user()
     print('What number is missing in the progression?')
     counter_correct = 0
-    while counter_correct < max_rounds:
+    while counter_correct < MAX_ROUNDS:
         start = randint(1, 15)
         step = randint(3, 8)
-        progression = range(start, max_num + start, step)
+        progression = range(start, MAX_NUM + start, step)
         progression_list = []
         for my_iter in progression:
             progression_list.append(my_iter)
@@ -29,5 +29,5 @@ def brain_progression():
                   f'Correct answer was {final_difference}.'
                   f'\nLet\'s try again, {name_user}!')
             break
-    if counter_correct == max_rounds:
+    if counter_correct == MAX_ROUNDS:
         congrats_win(name_user)
