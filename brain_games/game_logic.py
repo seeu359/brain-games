@@ -1,5 +1,4 @@
 import prompt
-from collections import Counter
 
 
 MAX_ROUNDS = 3
