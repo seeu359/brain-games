@@ -2,7 +2,7 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = 'My first project. These are 5 games under the main name "Brain-Games"'
-authors = ["a.ch3re359@yandex.ru"]
+authors = ["Alexey <a.ch3re359@yandex.ru>"]
 repository = 'https://github.com/seeu359/python-project-lvl1'
 classifiers = [' What is it?']
 packages = [
