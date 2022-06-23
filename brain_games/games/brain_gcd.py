@@ -24,4 +24,3 @@ def brain_gcd():
             break
     if counter_correct == MAX_ROUNDS:
         return congrats_win(name_user)
-print(brain_gcd())
