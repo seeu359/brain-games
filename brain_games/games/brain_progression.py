@@ -31,5 +31,3 @@ def brain_progression():
             break
     if counter_correct == MAX_ROUNDS:
         congrats_win(name_user)
-
-print(brain_progression())
