@@ -24,10 +24,12 @@ def brain_progression():
         if answer == final_difference:
             print('Correct')
             counter_correct += 1
-        elif answer != final_difference:
+        else:
             print(f'{answer} is wrong answer ;(. '
                   f'Correct answer was {final_difference}.'
                   f'\nLet\'s try again, {name_user}!')
             break
     if counter_correct == MAX_ROUNDS:
         congrats_win(name_user)
+
+print(brain_progression())
