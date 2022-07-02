@@ -23,15 +23,15 @@ def game_round(game, game_question):
     counter_round = 0
     print(game_question)
     while counter_round < MAX_ROUNDS:
-        answer, correct_answer = game()
-        print(f'Question: {answer}')
+        question, answer = game()
+        print(f'Question: {question}')
         answer_member = prompt.string("Your answer: ")
-        if answer_member == correct_answer:
+        if answer_member == answer:
             print("Correct!")
             counter_round += 1
         else:
             print(f'{answer_member} is wrong answer ;(. '
-                  f'Correct answer was {correct_answer}.'
+                  f'Correct answer was {answer}.'
                   f'\nLet\'s try again, {name_user}!')
             break
     if counter_round == MAX_ROUNDS:
