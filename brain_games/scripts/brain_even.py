@@ -1,12 +1,11 @@
 #!/usr/bin/env python
-from brain_games.game_logic import welcome
-from brain_games.games.brain_even import brain_event
+from brain_games.game_logic import game_round
+from brain_games.games.brain_even import brain_even, GAME_QUESTION
 
 
 def main():
-    welcome()
-    brain_event()
+    game_round(brain_even, GAME_QUESTION)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -1,26 +1,17 @@
-from brain_games.game_logic import welcome_user, MAX_ROUNDS, MIN_NUM
-from brain_games.game_logic import MAX_NUM, prompt, congrats_win
 from random import randint
-import math
+
+GAME_QUESTION = 'Find the greatest common divisor of given numbers.'
+
+
+def find_common_divisor(num_1, num_2):
+    my_list_1 = [x for x in range(1, num_1 + 1) if num_1 % x == 0]
+    my_list_2 = [x for x in range(1, num_2 + 1) if num_2 % x == 0]
+    return max(set(my_list_1) & set(my_list_2))
 
 
 def brain_gcd():
-    name_user = welcome_user()
-    counter_correct = 0
-    print('Find the greatest common divisor of given numbers.')
-    while counter_correct < MAX_ROUNDS:
-        first_number = randint(MIN_NUM, MAX_NUM)
-        second_number = randint(MIN_NUM, MAX_NUM)
-        print(f'Question: {first_number} {second_number}')
-        answer = int(prompt.string("Your answer: "))
-        correct_answer = math.gcd(first_number, second_number)
-        if answer == correct_answer:
-            counter_correct += 1
-            print('Correct')
-        elif answer != correct_answer:
-            print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {correct_answer}.'
-                  f'\nLet\'s try again, {name_user}!')
-            break
-    if counter_correct == MAX_ROUNDS:
-        return congrats_win(name_user)
+    num_1 = randint(1, 50)
+    num_2 = randint(1, 50)
+    answer = find_common_divisor(num_1, num_2)
+    question = f'{num_1} {num_2}'
+    return question, str(answer)
