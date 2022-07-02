@@ -18,14 +18,6 @@ def congrats_win(name):
     print(f'Congratulations, {name}!')
 
 
-def for_brain_prime(number):
-    counter = 0
-    for i in range(2, number // 2 + 1):
-        if number % i == 0:
-            counter += 1
-    return counter
-
-
 def game_round(game, game_question):
     name_user = welcome_user()
     counter_round = 0
