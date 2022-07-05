@@ -1,6 +1,8 @@
 from random import randint
 
 GAME_QUESTION = 'Find the greatest common divisor of given numbers.'
+NUMBER_1 = 1
+NUMBER_2 = 50
 
 
 def find_common_divisor(num_1, num_2):
@@ -9,9 +11,9 @@ def find_common_divisor(num_1, num_2):
     return max(set(my_list_1) & set(my_list_2))
 
 
-def brain_gcd():
-    num_1 = randint(1, 50)
-    num_2 = randint(1, 50)
+def game_rules():
+    num_1 = randint(NUMBER_1, NUMBER_2)
+    num_2 = randint(NUMBER_1, NUMBER_2)
     answer = find_common_divisor(num_1, num_2)
     question = f'{num_1} {num_2}'
     return question, str(answer)

@@ -1,10 +1,12 @@
 from random import randint
 
 GAME_QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+NUMBER_1 = 1
+NUMBER_2 = 100
 
 
-def brain_even():
-    random_number = randint(1, 100)
+def game_rules():
+    random_number = randint(NUMBER_1, NUMBER_2)
     question = random_number
     if question % 2 == 0:
         answer = 'yes'

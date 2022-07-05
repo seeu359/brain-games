@@ -18,12 +18,12 @@ def congrats_win(name):
     print(f'Congratulations, {name}!')
 
 
-def game_round(game, game_question):
+def game_round(game):
     name_user = welcome_user()
     counter_round = 0
-    print(game_question)
+    print(game.GAME_QUESTION)
     while counter_round < MAX_ROUNDS:
-        question, answer = game()
+        question, answer = game.game_rules()
         print(f'Question: {question}')
         answer_member = prompt.string("Your answer: ")
         if answer_member == answer:

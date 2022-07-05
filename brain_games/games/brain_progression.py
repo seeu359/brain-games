@@ -1,11 +1,18 @@
 from random import randint
+
 GAME_QUESTION = 'What number is missing in the progression?'
+NUMBER_FOR_START_1 = 1
+NUMBER_FOR_START_2 = 15
+NUMBER_FOR_END_1 = 50
+NUMBER_FOR_END_2 = 70
+NUMBER_FOR_STEP_1 = 3
+NUMBER_FOR_STEP_2 = 8
 
 
-def brain_progression():
-    start = randint(1, 15)
-    end = randint(50, 70)
-    step = randint(3, 8)
+def game_rules():
+    start = randint(NUMBER_FOR_START_1, NUMBER_FOR_START_2)
+    end = randint(NUMBER_FOR_END_1, NUMBER_FOR_END_2)
+    step = randint(NUMBER_FOR_STEP_1, NUMBER_FOR_STEP_2)
     progression = range(start, end + start, step)
     progression_list = []
     for i in progression:
