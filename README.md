@@ -34,8 +34,8 @@ src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability"
 
 Команды в Makefile: 
 1) install  - установка/отладка пакета в систему. Выполнит:
-        poetry install
-        poetry build
+        poetry install. 
+        poetry build. 
         python3 -m pip install --user --force-reinstall dist/*.whl
         
 2) publish - выполнит: poetry publish --dry-run
