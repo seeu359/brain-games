@@ -5,7 +5,7 @@ NUMBER_1 = 1
 NUMBER_2 = 100
 
 
-def game_rules():
+def get_game_data():
     random_number = randint(NUMBER_1, NUMBER_2)
     question = random_number
     if question % 2 == 0:

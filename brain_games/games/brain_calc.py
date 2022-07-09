@@ -6,7 +6,7 @@ NUMBER_1 = 1
 NUMBER_2 = 20
 
 
-def game_rules():
+def get_game_data():
     num_1 = randint(NUMBER_1, NUMBER_2)
     num_2 = randint(NUMBER_1, NUMBER_2)
     my_module_dict = {
@@ -14,12 +14,13 @@ def game_rules():
         'sum': f'{num_1} + {num_2}',
         'mul': f'{num_1} * {num_2}',
     }
-    pack = choice(list(my_module_dict.items()))
-    question = pack[1]
-    if pack[0] == 'sub':
+    random_example = choice(tuple(my_module_dict.items()))
+    my_operator, question = random_example
+    answer = int()
+    if my_operator == 'sub':
         answer = operator.sub(num_1, num_2)
-    elif pack[0] == 'sum':
+    elif my_operator == 'sum':
         answer = operator.add(num_1, num_2)
-    else:
+    elif my_operator == 'mul':
         answer = operator.mul(num_1, num_2)
     return question, str(answer)

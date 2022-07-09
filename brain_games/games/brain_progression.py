@@ -9,7 +9,7 @@ NUMBER_FOR_STEP_1 = 3
 NUMBER_FOR_STEP_2 = 8
 
 
-def game_rules():
+def get_game_data():
     start = randint(NUMBER_FOR_START_1, NUMBER_FOR_START_2)
     end = randint(NUMBER_FOR_END_1, NUMBER_FOR_END_2)
     step = randint(NUMBER_FOR_STEP_1, NUMBER_FOR_STEP_2)

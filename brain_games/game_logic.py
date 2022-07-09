@@ -3,12 +3,8 @@ import prompt
 MAX_ROUNDS = 3
 
 
-def welcome():
-    print("Welcome to the Brain Games!")
-
-
 def welcome_user():
-    welcome()
+    print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     return name
@@ -18,21 +14,20 @@ def congrats_win(name):
     print(f'Congratulations, {name}!')
 
 
-def game_round(game):
+def launch_game_round(game):
     name_user = welcome_user()
     counter_round = 0
     print(game.GAME_QUESTION)
     while counter_round < MAX_ROUNDS:
-        question, answer = game.game_rules()
+        question, answer = game.get_game_data()
         print(f'Question: {question}')
         answer_member = prompt.string("Your answer: ")
         if answer_member == answer:
             print("Correct!")
             counter_round += 1
-        else:
+        elif answer_member != answer:
             print(f'{answer_member} is wrong answer ;(. '
                   f'Correct answer was {answer}.'
                   f'\nLet\'s try again, {name_user}!')
-            break
-    if counter_round == MAX_ROUNDS:
-        congrats_win(name_user)
+            return
+    congrats_win(name_user)
