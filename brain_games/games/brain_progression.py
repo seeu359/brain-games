@@ -1,18 +1,18 @@
 from random import randint
 
 GAME_QUESTION = 'What number is missing in the progression?'
-NUMBER_FOR_START_1 = 1
-NUMBER_FOR_START_2 = 15
-NUMBER_FOR_END_1 = 50
-NUMBER_FOR_END_2 = 70
-NUMBER_FOR_STEP_1 = 3
-NUMBER_FOR_STEP_2 = 8
+MIN_NUM_FOR_START = 1
+MAX_NUM_FOR_START = 15
+MIX_NUM_FOR_END = 50
+MAX_NUM_FOR_END = 70
+MIN_NUM_FOR_STEP = 3
+MAX_NUM_FOR_STEP = 8
 
 
 def get_game_data():
-    start = randint(NUMBER_FOR_START_1, NUMBER_FOR_START_2)
-    end = randint(NUMBER_FOR_END_1, NUMBER_FOR_END_2)
-    step = randint(NUMBER_FOR_STEP_1, NUMBER_FOR_STEP_2)
+    start = randint(MIN_NUM_FOR_START, MAX_NUM_FOR_START)
+    end = randint(MIX_NUM_FOR_END, MAX_NUM_FOR_END)
+    step = randint(MIN_NUM_FOR_STEP, MAX_NUM_FOR_STEP)
     progression = range(start, end + start, step)
     progression_list = []
     for i in progression:
