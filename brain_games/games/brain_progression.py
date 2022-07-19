@@ -13,13 +13,11 @@ def get_game_data():
     start = randint(MIN_NUM_FOR_START, MAX_NUM_FOR_START)
     end = randint(MIX_NUM_FOR_END, MAX_NUM_FOR_END)
     step = randint(MIN_NUM_FOR_STEP, MAX_NUM_FOR_STEP)
-    progression = range(start, end + start, step)
     progression_list = []
-    for i in progression:
+    for i in range(start, end + start, step):
         progression_list.append(i)
-    difference_set = set(progression_list)
-    progression_list[randint(0, len(progression_list) - 1)] = '..'
-    difference_set = list(difference_set - set(progression_list))
-    answer = difference_set[0]
-    question = ' '.join([str(_) for _ in progression_list])
+    random_index = randint(0, len(progression_list) - 1)
+    answer = progression_list[random_index]
+    progression_list[random_index] = '..'
+    question = ' '.join([str(x) for x in progression_list])
     return question, str(answer)

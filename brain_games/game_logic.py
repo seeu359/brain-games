@@ -1,6 +1,6 @@
 import prompt
 
-MAX_ROUNDS = 3
+ROUND_NUMBER = 3
 
 
 def welcome_user():
@@ -10,15 +10,11 @@ def welcome_user():
     return name
 
 
-def congrats_win(name):
-    print(f'Congratulations, {name}!')
-
-
 def launch_game_round(game):
     username = welcome_user()
     round_counter = 0
     print(game.GAME_QUESTION)
-    while round_counter < MAX_ROUNDS:
+    while round_counter < ROUND_NUMBER:
         question, answer = game.get_game_data()
         print(f'Question: {question}')
         user_answer = prompt.string("Your answer: ")
@@ -30,4 +26,4 @@ def launch_game_round(game):
                   f'Correct answer was {answer}.')
             print(f'Let\'s try again, {username}!')
             return
-    congrats_win(username)
+    print(f'Congratulations, {username}!')
