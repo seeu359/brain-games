@@ -7,19 +7,19 @@ MAX_NUMBER = 20
 
 
 def get_game_data():
-    num_1 = randint(MIN_NUMBER, MAX_NUMBER)
-    num_2 = randint(MIN_NUMBER, MAX_NUMBER)
-    my_module_dict = {
-        'sub': f'{num_1} - {num_2}',
-        'sum': f'{num_1} + {num_2}',
-        'mul': f'{num_1} * {num_2}',
+    number_1 = randint(MIN_NUMBER, MAX_NUMBER)
+    number_2 = randint(MIN_NUMBER, MAX_NUMBER)
+    example_dict = {
+        'sub': f'{number_1} - {number_2}',
+        'sum': f'{number_1} + {number_2}',
+        'mul': f'{number_1} * {number_2}',
     }
-    my_operator, question = choice(tuple(my_module_dict.items()))
+    operation, question = choice(tuple(example_dict.items()))
     answer = int()
-    if my_operator == 'sub':
-        answer = operator.sub(num_1, num_2)
-    elif my_operator == 'sum':
-        answer = operator.add(num_1, num_2)
-    elif my_operator == 'mul':
-        answer = operator.mul(num_1, num_2)
+    if operation == 'sub':
+        answer = operator.sub(number_1, number_2)
+    elif operation == 'sum':
+        answer = operator.add(number_1, number_2)
+    elif operation == 'mul':
+        answer = operator.mul(number_1, number_2)
     return question, str(answer)

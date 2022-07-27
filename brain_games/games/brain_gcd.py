@@ -7,8 +7,8 @@ MAX_NUMBER = 50
 
 
 def get_game_data():
-    num_1 = randint(MIN_NUMBER, MAX_NUMBER)
-    num_2 = randint(MIN_NUMBER, MAX_NUMBER)
-    answer = gcd(num_1, num_2)
-    question = f'{num_1} {num_2}'
+    number_1 = randint(MIN_NUMBER, MAX_NUMBER)
+    number_2 = randint(MIN_NUMBER, MAX_NUMBER)
+    answer = gcd(number_1, number_2)
+    question = f'{number_1} {number_2}'
     return question, str(answer)
